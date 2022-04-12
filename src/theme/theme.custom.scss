@@ -10,7 +10,35 @@
  */
 :root {
 
+    ion-content{ 
+        font-family: Helvetica, Sans-Serif;
+        font-size:1.0em;
+      }
+      --ion-font-family: Helvetica, Sans-Serif;
+  
+
+    ion-header ion-toolbar.in-toolbar h1, ion-header ion-toolbar.in-toolbar h2 {
+        font-weight: bold;
+        font-size: 1.0em;
+    }
+
+    core-courses-course-progress  ion-card ion-item{
+        background-color: #095094 !important;
+    }
+
+    core-courses-course-progress ion-card ion-item ion-label p.core-course-additional-info, core-courses-course-progress ion-card ion-item ion-label p.item-heading {
+        color: white;
+    }
+
+    ion-card ion-item div ion-button ion-icon {
+        color: white !important;
+    }        
+
+    ion-item-divider core-context-menu ion-button ion-icon{
+        color: black !important;
+    }
 }
+
 
 /*
  * Dark Theme

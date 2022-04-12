@@ -107,7 +107,6 @@ export class CoreMainMenuPage implements OnInit, OnDestroy {
             this.tabsPlacement = CoreMainMenu.getTabPlacement();
 
             const handlers = this.allHandlers.slice(0, CoreMainMenu.getNumItems()); // Get main handlers.
-
             // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
             const newTabs: CoreMainMenuHandlerToDisplay[] = [];
 
@@ -116,6 +115,10 @@ export class CoreMainMenuPage implements OnInit, OnDestroy {
 
                 // Check if the handler is already in the tabs list. If so, use it.
                 const tab = this.tabs.find((tab) => tab.page == handler.page);
+
+                if (i == 0) {
+                    handler.icon = 'fas-home';
+                }
 
                 tab ? tab.hide = false : null;
                 handler.hide = false;

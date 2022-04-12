@@ -421,11 +421,11 @@ export class CoreSettingsHelperProvider {
 
         if (!CoreConstants.CONFIG.forceColorScheme) {
             this.colorSchemes.push(CoreColorScheme.LIGHT);
-            this.colorSchemes.push(CoreColorScheme.DARK);
+            //this.colorSchemes.push(CoreColorScheme.DARK);
 
-            if (this.canIUsePrefersColorScheme()) {
-                this.colorSchemes.push(CoreColorScheme.SYSTEM);
-            }
+            // if (this.canIUsePrefersColorScheme()) {
+            //     this.colorSchemes.push(CoreColorScheme.SYSTEM);
+            // }
         } else {
             this.colorSchemes = [CoreConstants.CONFIG.forceColorScheme];
         }

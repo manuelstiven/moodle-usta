@@ -81,11 +81,12 @@ export class AppComponent implements OnInit, AfterViewInit {
             this.removeVersionClass(MOODLE_VERSION_PREFIX);
 
             // Go to sites page when user is logged out.
-            await CoreNavigator.navigate('/login/sites', { reset: true });
+            //await CoreNavigator.navigate('/login/sites', { reset: true });
+            await CoreNavigator.navigate('/login/credentials', { reset: true });
 
             if (CoreSitePlugins.hasSitePluginsLoaded) {
                 // Temporary fix. Reload the page to unload all plugins.
-                window.location.reload();
+                //window.location.reload();
             }
         });
 

@@ -239,12 +239,13 @@ export class CoreSite {
      * @return Site name.
      */
     getSiteName(): string {
-        if (CoreConstants.CONFIG.sitename) {
-            // Overridden by config.
-            return CoreConstants.CONFIG.sitename;
-        } else {
-            return this.infos?.sitename || '';
-        }
+        return 'Bienvenidos a las formaciones Usta';
+        // if (CoreConstants.CONFIG.sitename) {
+        //     // Overridden by config.
+        //     return CoreConstants.CONFIG.sitename;
+        // } else {
+        //     return this.infos?.sitename || '';
+        // }
     }
 
     /**
