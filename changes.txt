@@ -1,0 +1,24 @@
+Directorio transversal de ZIP
+Tu aplicación tiene un patrón de descompresión de ZIP no seguro que puede originar una vulnerabilidad del directorio transversal. Consulta cómo solucionar el problema en este artículo del Centro de Ayuda de Google.
+
+org.apache.cordova.Zip.unzipSync
+
+
+Cordova plugin zip
+
+  7  
+cordova-plugin-zip/src/android/Zip.java
+@@ -126,6 +126,13 @@ private void unzipSync(CordovaArgs args, CallbackContext callbackContext) {
+                   dir.mkdirs();
+                } else {
+                    File file = new File(outputDirectory + compressedName);
+                                                            String canonicalPath = file.getCanonicalPath();
+                                                            if (!canonicalPath.startsWith(outputDirectory)) {
+                                                                String errorMessage = "Zip traversal security error";
+                                                                callbackContext.error(errorMessage);
+                                                                Log.e(LOG_TAG, errorMessage);
+                                                                return;
+                                                            }
+                    file.getParentFile().mkdirs();
+                    if(file.exists() || file.createNewFile()){
+                        Log.w("Zip", "extracting: " + file.getPath());
