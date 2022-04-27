@@ -22,3 +22,12 @@ cordova-plugin-zip/src/android/Zip.java
                     file.getParentFile().mkdirs();
                     if(file.exists() || file.createNewFile()){
                         Log.w("Zip", "extracting: " + file.getPath());
+
+package.json
+
+// "cordova-plugin-zip": "3.1.0",
+"@moodlehq/cordova-plugin-zip": "3.1.0-moodle.1",
+
+
+"@moodlehq/cordova-plugin-zip": {},
+cordova-plugin-zip": {},
