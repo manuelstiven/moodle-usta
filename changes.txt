@@ -31,3 +31,8 @@ package.json
 
 "@moodlehq/cordova-plugin-zip": {},
 cordova-plugin-zip": {},
+
+
+https://tracker.moodle.org/browse/MOBILE-3949
+
+https://github.com/moodlehq/moodleapp/pull/3024/files/b9747416e54742f566b30ed56746e61b1bf9d2d9#diff-053150b640a7ce75eff69d1a22cae7f0f94ad64ce9a855db544dda0929316519
